@@ -122,3 +122,6 @@ res = MySQL.Query(conn, """select * from test;""") |> columntable
 
 @test res.a[1] == "test"
 @test res.b[1] == 123
+
+# Tests for specific issues
+include("issue_130.jl"); tests_for_issue130(conn)
